@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Barbearia</string>
+    <string name="hey">Hey, escolha o local da Barbearia\n para ser atendido</string>
+
+
+    <string name="bg_degrade">Background</string>
+    <string name="icon_mustache">IconMustache</string>
+    <string name="escolha_o_barbeiro">Escolha o Barbeiro para</string>
+    <string name="disponibilidade">ver a disponibilidade de horário</string>
+    <string name="btn_voltar">VOLTAR</string>
+    <string name="txt_titulo_view_agendamento">ESCOLHA O QUE VOCÊ DESEJA</string>
+    <string name="txt_subtitulo_view_agendamento">E SELECIONE O DIA/HORARIO</string>
+
+    <string name="spinner_data_hora">Spinner data/hora</string>
+    <string name="img_barbeiro">Foto do barbeiro</string>
+    <string name="btn_agendar">AGENDAR</string>
+    <string name="foto_list_barbeiro" > Foto do barbeiro</string>
+    <string name="name_list_barbeiro">Nome do barbeiro</string>
+
+
+    <string name="txt_name_clienet_agendamento">Insira seu nome</string>
+    <string name="option_agendar_corte_maquina">MAQUINA</string>
+    <string name="option_agendar_corte_tesoura">TESOURA</string>
+    <string name="option_agendar_corte_sobrancelha">SOBRANCELHA</string>
+    <string name="option_agendar_corte_barba">BARBA</string>
+
+    <string name="agendamento_realizado">AGENDAMENTO REALIZADO </string>
+    <string name="splash">Splash</string>
+    <string name="recife">RECIFE</string>
+    <string name="caruaru">CARUARU</string>
+    <string name="logo">logo5</string>
+    <string name="barbeiro">barbeiro</string>
+    <string name="ic_1">ic_1</string>
+    <string name="btn_back">oi</string>
+</resources>
