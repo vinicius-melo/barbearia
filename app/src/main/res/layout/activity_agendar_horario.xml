@@ -75,7 +75,7 @@
         android:layout_width="296dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/spinner_background"
+        android:background="@drawable/bg_spinner"
         android:contentDescription="@string/spinner_data_hora"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

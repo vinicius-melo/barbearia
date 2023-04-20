@@ -5,34 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color3"
-    tools:context=".MainActivity">
+    tools:context="com.barbearia.EscolhaBarbeiros">
 
     <View
         android:id="@+id/header1"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="160dp"
         android:background="@color/white"
         app:layout_constraintTop_toBottomOf="@id/RecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <View
+        android:id="@+id/viewRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="610dp"
+        android:background="@drawable/bg_recycler"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header1" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerView"
-        android:layout_width="395dp"
-        android:layout_height="515dp"
-        android:background="@drawable/bg_recycler"
+        android:layout_width="334dp"
+        android:layout_height="491dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="22dp"
+        android:background="@color/white"
         android:scrollbars="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/header1"
         tools:visibility="visible" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/header2"
         android:layout_width="match_parent"
-        android:layout_height="140dp"
+        android:layout_height="160dp"
         android:background="@drawable/bg_header2"
         app:layout_constraintTop_toBottomOf="@id/RecyclerView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,7 +55,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="94dp"
         android:layout_marginEnd="120dp"
         android:fontFamily="@font/alata"
         android:text="@string/escolha_o_barbeiro"
@@ -59,8 +70,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="18dp"
         android:fontFamily="@font/alata"
         android:text="@string/disponibilidade"
         android:textColor="@color/color4"
@@ -68,7 +79,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/RecyclerView" />
+        app:layout_constraintBottom_toTopOf="@id/viewRecycler" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -79,8 +90,8 @@
         android:contentDescription="@string/barbeiro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/barbeiro1"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/img_barbeiro"
+        />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -113,5 +124,30 @@
         tools:ignore="SmallSp"
         />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:fontFamily="@font/alata"
+        android:text="@string/barbeiros"
+        android:textAlignment="center"
+        android:textColor="@color/color3"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewRecycler" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.890"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewRecycler"
+        app:srcCompat="@drawable/ic_horario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
