@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 
+import com.google.gson.JsonObject;
+import com.koushikdutta.ion.Ion;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -38,4 +41,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    /*
+    Log.i("teste", "teste" + obj.get("nome"));
+                        Log.i("teste", "teste" + obj.get("idade"));
+                        Log.i("teste", "teste" + obj.get("profissao"));
+    */
+
 }

@@ -11,12 +11,16 @@ import android.util.Log;
 import android.widget.Button;
 
 import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
 import com.koushikdutta.ion.Ion;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.security.KeyStore;
 import java.security.cert.Certificate;
@@ -25,6 +29,7 @@ import java.security.cert.CertificateFactory;
 import java.security.cert.X509Certificate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -33,9 +38,9 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
 public class EscolhaBarbeiros extends AppCompatActivity {
-    //private static final String HOST = "https://barbershop.great-site.net/";
+    private static final String HOST = "https://vinicius-melo.000webhostapp.com/";
 
-    private static final String HOST = "http://192.168.0.107/";
+   // private static final String HOST = "http://192.168.0.107/";
     private String cidade;
     List<Barbeiros> barbeirosList;
     Adapter adapter;
@@ -91,10 +96,14 @@ public class EscolhaBarbeiros extends AppCompatActivity {
                         b.setFoto(obj.get("foto").getAsString());
                         b.setCidade(obj.get("cidade").getAsString());
                         barbeirosList.add(b);
+
+
                     }
                     adapter.notifyDataSetChanged();
                 });
+
     }
+
 
 
 }
