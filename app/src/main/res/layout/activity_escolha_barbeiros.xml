@@ -143,7 +143,7 @@
         android:textColor="@color/color3"
         android:textSize="19sp"
         android:textStyle="bold"
-        android:shadowRadius="3"
+        android:shadowRadius="1"
         android:shadowColor="@color/color3"
         android:shadowDx="0"
         android:shadowDy="0"
