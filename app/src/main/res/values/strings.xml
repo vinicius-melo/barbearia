@@ -8,8 +8,8 @@
     <string name="escolha_o_barbeiro">Escolha o Barbeiro para</string>
     <string name="disponibilidade">ver a disponibilidade de horário</string>
     <string name="btn_voltar">VOLTAR</string>
-    <string name="txt_titulo_view_agendamento">ESCOLHA O QUE VOCÊ DESEJA</string>
-    <string name="txt_subtitulo_view_agendamento">E SELECIONE O DIA/HORARIO</string>
+    <string name="txt_titulo_view_agendamento">Escolha o que você deseja</string>
+    <string name="txt_subtitulo_view_agendamento">e selecione o dia e horário</string>
 
     <string name="spinner_data_hora">Spinner data/hora</string>
     <string name="img_barbeiro">Foto do barbeiro</string>
@@ -19,10 +19,10 @@
 
 
     <string name="txt_name_clienet_agendamento">Insira seu nome</string>
-    <string name="option_agendar_corte_maquina">MAQUINA</string>
-    <string name="option_agendar_corte_tesoura">TESOURA</string>
-    <string name="option_agendar_corte_sobrancelha">SOBRANCELHA</string>
-    <string name="option_agendar_corte_barba">BARBA</string>
+    <string name="option_agendar_corte_maquina">Máquina</string>
+    <string name="option_agendar_corte_tesoura">Tesoura</string>
+    <string name="option_agendar_corte_sobrancelha">Sobrancelha</string>
+    <string name="option_agendar_corte_barba">Barba</string>
 
     <string name="agendamento_realizado">AGENDAMENTO REALIZADO </string>
     <string name="splash">Splash</string>
@@ -34,4 +34,6 @@
     <string name="btn_back">oi</string>
     <string name="barbeiros">Barbeiros</string>
     <string name="horario">horario</string>
+    <string name="insira_seu_nome">Insira seu Nome</string>
+    <string name="oi">oi</string>
 </resources>

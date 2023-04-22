@@ -40,15 +40,15 @@
         <TextView
             android:id="@+id/nome_barbeiro"
             android:layout_width="0dp"
-            android:layout_height="21dp"
-            android:layout_marginBottom="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
             android:layout_weight="1"
             android:fontFamily="@font/alata"
             android:paddingStart="18dp"
             android:text="@string/name_list_barbeiro"
             android:textAllCaps="false"
             android:textColor="@color/color3"
-            android:textSize="16sp"
+            android:textSize="17sp"
             android:textStyle="bold"
             android:typeface="serif"
             tools:ignore="RtlSymmetry" />
