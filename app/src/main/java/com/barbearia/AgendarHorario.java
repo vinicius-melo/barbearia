@@ -38,7 +38,7 @@ public class AgendarHorario extends AppCompatActivity {
     List<String> itens;
     private String cidade, itemSelecionado, idBarbeiro, mensagemAgendamento, tokenBarbeiro, nomeClienteUrl, procedimentoCliente = "%20";
 
-    private ArrayList<String> procedimento = new ArrayList<>();
+    private final ArrayList<String> procedimento = new ArrayList<>();
     private int valorCorte = 0;
     //private static final String HOST = "http://192.168.0.107/";
     private static final String HOST = "https://vinicius-melo.000webhostapp.com/";
@@ -105,7 +105,7 @@ public class AgendarHorario extends AppCompatActivity {
             confirmaAgendar.setCancelable(false);
 
             AlertDialog.Builder agendamentoRealizado = new AlertDialog.Builder(AgendarHorario.this);
-            agendamentoRealizado.setMessage("AGENDAMENTO REALIZADO COM SUCESSO");
+            agendamentoRealizado.setMessage("Agendamento realizado com Sucesso!");
             agendamentoRealizado.setCancelable(false);
             agendamentoRealizado.setPositiveButton("ok", (dialogInterface, i) -> {
                 Intent intent = new Intent(this, MainActivity.class);
@@ -113,7 +113,7 @@ public class AgendarHorario extends AppCompatActivity {
             });
 
             confirmaAgendar.setPositiveButton("CONFIRMAR", (dialogInterface, i) -> {
-                if (!itemSelecionado.equals("Agende seu horario")) {
+                if (!itemSelecionado.equals("   Agende seu horário")) {
                     if (maquina.isChecked() || tesoura.isChecked() || sobrancelha.isChecked() || barba.isChecked()) {
                         if (!TextUtils.isEmpty(nomeCliente.getText())) {
 
@@ -138,11 +138,11 @@ public class AgendarHorario extends AppCompatActivity {
                         erroAgendamento.show();
                     }
                 } else {
-                    erroAgendamento.setMessage("Escolha um horario para o seu agendamento");
+                    erroAgendamento.setMessage("Escolha um horário para o seu agendamento");
                     erroAgendamento.show();
                 }
             });
-            confirmaAgendar.setNegativeButton("CORRIGIR AGENDAMENTO", null);
+            confirmaAgendar.setNegativeButton("Corrigir Agendamento", null);
             confirmaAgendar.create().show();
         });
     }
@@ -234,7 +234,7 @@ public class AgendarHorario extends AppCompatActivity {
         spinner = findViewById(R.id.marcacao_data_horario);
         itens = new ArrayList<>();
 
-        itens.add("Agende seu horario");
+        itens.add("   Agende seu horário");
 
         String[] nome = nomeBarbeiro.split(" ");
 
@@ -260,7 +260,7 @@ public class AgendarHorario extends AppCompatActivity {
                             Ion.with(AgendarHorario.this).load(url).asJsonArray().setCallback((a, resultado) -> {
                                 for (int g = 0; g < resultado.size(); g++) {
                                     JsonObject objeto = resultado.get(g).getAsJsonObject();
-                                    itens.add(objeto.get("horario disponivel").getAsString());
+                                    itens.add(objeto.get("horario disponível").getAsString());
                                 }
                             });
 
@@ -278,7 +278,7 @@ public class AgendarHorario extends AppCompatActivity {
                     Ion.with(AgendarHorario.this).load(url).asJsonArray().setCallback((a, resultado) -> {
                         for (int g = 0; g < resultado.size(); g++) {
                             JsonObject objeto = resultado.get(g).getAsJsonObject();
-                            itens.add(objeto.get("horario disponivel").getAsString());
+                            itens.add(objeto.get("horario disponível").getAsString());
                         }
                     });
                 }

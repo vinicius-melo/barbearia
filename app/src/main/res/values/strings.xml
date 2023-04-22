@@ -7,7 +7,7 @@
     <string name="icon_mustache">IconMustache</string>
     <string name="escolha_o_barbeiro">Escolha o Barbeiro para</string>
     <string name="disponibilidade">ver a disponibilidade de horário</string>
-    <string name="btn_voltar">VOLTAR</string>
+    <string name="btn_voltar">v</string>
     <string name="txt_titulo_view_agendamento">Escolha o que você deseja</string>
     <string name="txt_subtitulo_view_agendamento">e selecione o dia e horário</string>
 
