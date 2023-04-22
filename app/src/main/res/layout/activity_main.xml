@@ -38,7 +38,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="137dp"
         android:background="@drawable/bg_one_button"
-        android:fontFamily="sans-serif-medium"
+        android:fontFamily="@font/alata"
         android:text="@string/recife"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -55,16 +55,16 @@
         android:layout_marginBottom="67dp"
         android:background="@drawable/bg_caruaru"
         android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/alata"
         android:text="@string/caruaru"
         android:textAlignment="center"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:focusable="true" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
