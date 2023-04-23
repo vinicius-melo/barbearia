@@ -21,7 +21,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> {
 
     private final Context ctx;
     private final List<Barbeiros>  listBarbeiros;
-    String urlImage = "https://vinicius-melo.github.io/fotos/";
+    String urlImage = "https://willbarbershop.net/barbershop/fotos/";
 
     public Adapter (Context ctx2, List<Barbeiros> list){
         ctx = ctx2;

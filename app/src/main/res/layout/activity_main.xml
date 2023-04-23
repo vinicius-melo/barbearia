@@ -77,7 +77,7 @@
         android:textColor="@color/color6"
         android:textSize="15sp"
         android:shadowRadius="4"
-        android:shadowColor="#b96226"
+        android:shadowColor="#D87E40"
         android:shadowDx="0"
         android:shadowDy="0"
         app:layout_constraintBottom_toBottomOf="parent"

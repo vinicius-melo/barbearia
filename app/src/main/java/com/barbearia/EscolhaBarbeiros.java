@@ -38,7 +38,7 @@ import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
 public class EscolhaBarbeiros extends AppCompatActivity {
-    private static final String HOST = "https://vinicius-melo.000webhostapp.com/";
+    private static final String HOST = "https://willbarbershop.net/";
 
    // private static final String HOST = "http://192.168.0.107/";
     private String cidade;

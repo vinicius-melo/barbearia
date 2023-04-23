@@ -41,7 +41,7 @@ public class AgendarHorario extends AppCompatActivity {
     private final ArrayList<String> procedimento = new ArrayList<>();
     private int valorCorte = 0;
     //private static final String HOST = "http://192.168.0.107/";
-    private static final String HOST = "https://vinicius-melo.000webhostapp.com/";
+    private static final String HOST = "https://willbarbershop.net/";
 
     private TextView valorTotal;
     private EditText nomeCliente;
