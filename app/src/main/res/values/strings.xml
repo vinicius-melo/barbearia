@@ -14,7 +14,7 @@
     <string name="spinner_data_hora">Spinner data/hora</string>
     <string name="img_barbeiro">Foto do barbeiro</string>
     <string name="btn_agendar">Agendar</string>
-    <string name="foto_list_barbeiro" > Foto do barbeiro</string>
+    <string name="foto_list_barbeiro"> Foto do barbeiro</string>
     <string name="name_list_barbeiro">Nome do barbeiro</string>
 
 
@@ -37,4 +37,13 @@
     <string name="insira_seu_nome">Insira seu Nome</string>
     <string name="oi">oi</string>
     <string name="ic_scissors">ic_scissors</string>
+    <string name="relatorio">Relatório</string>
+    <string name="capturar">Capturar</string>
+    <string name="nome_do_barbeiro">Nome do Barbeiro:</string>
+    <string name="nome_do_cliente">Nome do Cliente:</string>
+    <string name="data_horario">Data/Horário:</string>
+    <string name="procedimentos">Procedimentos:</string>
+    <string name="valor_total">Valor Total:</string>
+    <string name="obs_relatorio">Obs: Será necessário apresentar a captura de tela deste relatório para ser atendido pelo Barbeiro.</string>
+    <string name="barbeiro_relatorio">barbeiro_relatorio</string>
 </resources>

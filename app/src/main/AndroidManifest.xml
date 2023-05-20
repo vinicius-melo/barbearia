@@ -13,38 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Barbearia"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Relatorio"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"
-            />
-
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".AgendarHorario"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".EscolhaBarbeiros"
             android:exported="false"
-            android:screenOrientation="portrait">
-
-        </activity>
-
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".Splash"
-            android:screenOrientation="portrait"
             android:exported="true"
+            android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
