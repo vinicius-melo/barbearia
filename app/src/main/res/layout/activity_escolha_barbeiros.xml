@@ -93,7 +93,7 @@
         android:id="@+id/imageView3"
         android:layout_width="67dp"
         android:layout_height="54dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="29dp"
         android:layout_marginEnd="24dp"
         android:contentDescription="@string/barbeiro"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,34 +101,23 @@
         app:srcCompat="@drawable/img_barbeiro"
         />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="24dp"
-        android:contentDescription="@string/ic_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_1"
-        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_back"
         android:layout_width="48dp"
         android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/bg_button_back"
-        android:drawableStart="@drawable/ic_arrow_back"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="15dp"
+        android:drawableStart="@drawable/ic_back"
         android:text="@string/btn_back"
         android:textSize="0.1sp"
         android:textAlignment="textStart"
         android:textColor="@color/color3"
         android:paddingHorizontal="10dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SmallSp"
         />
 
