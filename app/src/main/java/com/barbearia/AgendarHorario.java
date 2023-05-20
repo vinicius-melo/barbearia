@@ -36,7 +36,7 @@ public class AgendarHorario extends AppCompatActivity {
 
     Spinner spinner;
     List<String> itens;
-    private String cidade, itemSelecionado, idBarbeiro, mensagemAgendamento, tokenBarbeiro, nomeClienteUrl, procedimentoCliente = "%20";
+    private String cidade, itemSelecionado, idBarbeiro, mensagemAgendamento, tokenBarbeiro, nomeClienteUrl,nomeClienteTotal, procedimentoClienteTotal = "", valorCorteTotal , procedimentoCliente = "%20";
 
     private final ArrayList<String> procedimento = new ArrayList<>();
     private int valorCorte = 0;
@@ -96,6 +96,7 @@ public class AgendarHorario extends AppCompatActivity {
         agendar.setOnClickListener(v -> {
 
             nomeCliente = findViewById(R.id.txt_nome_cliente);
+            nomeClienteTotal = nomeCliente.getText().toString();
             nomeClienteUrl = nomeCliente.getText().toString();
             nomeClienteUrl = nomeClienteUrl.replace(" ", "%20");
 
@@ -104,13 +105,7 @@ public class AgendarHorario extends AppCompatActivity {
             confirmaAgendar.setTitle("Confirma o agendamento?");
             confirmaAgendar.setCancelable(false);
 
-            AlertDialog.Builder agendamentoRealizado = new AlertDialog.Builder(AgendarHorario.this);
-            agendamentoRealizado.setMessage("Agendamento realizado com Sucesso!");
-            agendamentoRealizado.setCancelable(false);
-            agendamentoRealizado.setPositiveButton("ok", (dialogInterface, i) -> {
-                Intent intent = new Intent(this, MainActivity.class);
-                startActivity(intent);
-            });
+
 
             confirmaAgendar.setPositiveButton("CONFIRMAR", (dialogInterface, i) -> {
                 if (!itemSelecionado.equals("   Agende seu horário")) {
@@ -124,10 +119,15 @@ public class AgendarHorario extends AppCompatActivity {
                                     "%0A💈%0A💈%0A💈%20💸TOTAL%20A%20PAGAR:%20R$%20" + valorCorte + ",00";
                             agendamentoTelegram();
                             agendamentoRealizado();
-
-
-                            agendamentoRealizado.create().show();
-
+                            valorCorteTotal = "R$ " + valorCorte + ",00";
+                            Intent intent = new Intent(this, Relatorio.class);
+                            intent.putExtra("nomeBarbeiro", nomeBarbeiro);
+                            intent.putExtra("nomeCliente", nomeClienteTotal);
+                            intent.putExtra("horario", itemSelecionado);
+                            intent.putExtra("procedimento", procedimentoClienteTotal);
+                            intent.putExtra("valorTotal", valorCorteTotal);
+                            Log.i("STATS: ", "RELATORIO");
+                            startActivity(intent);
 
                         } else {
                             erroAgendamento.setMessage("Por favor insira seu  nome");
@@ -325,6 +325,7 @@ public class AgendarHorario extends AppCompatActivity {
     public void listarProcedimentos() {
         for (int i = 0; i < procedimento.size(); i++) {
             Log.i("TAG", "procedimento: " + procedimentoCliente);
+            procedimentoClienteTotal += procedimento.get(i) + " ";
             procedimentoCliente += procedimento.get(i) + "%20";
 
         }

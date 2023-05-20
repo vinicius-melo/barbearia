@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="127dp"
-        android:text="@string/relatorio"
-        android:textSize="35sp"
         android:fontFamily="@font/alata"
-        android:textStyle="bold"
+        android:text="@string/relatorio"
         android:textColor="@color/color4"
+        android:textSize="35sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,22 +29,22 @@
         android:layout_height="54dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="45dp"
+        android:contentDescription="@string/relatorio"
         android:src="@drawable/ic_relatorio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/relatorio" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="600dp"
-        android:layout_marginTop="120dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/bg_relatorio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_capturar"
@@ -58,21 +58,21 @@
         android:textColor="@color/color3"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/nomebarbeiro_relatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
         android:layout_marginStart="35dp"
-        android:text="@string/nome_do_barbeiro"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/alata"
+        android:text="@string/nome_do_barbeiro"
         android:textColor="@color/color3"
-        android:textStyle="bold"
         android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,29 +82,30 @@
         android:id="@+id/nomebarbeiro_sv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="94dp"
         android:layout_marginStart="115dp"
+        android:layout_marginTop="92dp"
+        android:text="asdasd"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:text="teste teste"
         android:textColor="@color/color4"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view" />
 
     <TextView
         android:id="@+id/nomecliente_relatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
         android:layout_marginStart="35dp"
-        android:text="@string/nome_do_cliente"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/alata"
+        android:text="@string/nome_do_cliente"
         android:textColor="@color/color3"
-        android:textStyle="bold"
         android:textSize="17sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,147 +115,184 @@
         android:id="@+id/nomecliente_sv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
         android:layout_marginStart="115dp"
+        android:layout_marginTop="48dp"
+        android:text="asdasd"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:text="teste teste"
         android:textColor="@color/color4"
         android:textSize="17sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="@id/nomebarbeiro_sv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/nomebarbeiro_sv" />
+
+    <TextView
+        android:id="@+id/data_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdasda"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/color4"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="227dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <TextView
+        android:id="@+id/procedimento_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="76dp"
+        android:text="asdasda"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/color4"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/valor_sv"
+        app:layout_constraintEnd_toEndOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/valor_sv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="80dp"
+        android:text="sadasda"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/color4"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/obs_relatorio"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/data_relatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginStart="32dp"
-        android:text="@string/data_horario"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/alata"
+        android:text="@string/data_horario"
         android:textColor="@color/color3"
-        android:textStyle="bold"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/nomecliente_relatorio" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/procedimentos_relatorio"
+        app:layout_constraintEnd_toStartOf="@+id/data_sv" />
 
     <TextView
         android:id="@+id/procedimentos_relatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginStart="33dp"
-        android:text="@string/procedimentos"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="72dp"
         android:fontFamily="@font/alata"
+        android:text="@string/procedimentos"
         android:textColor="@color/color3"
-        android:textStyle="bold"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/data_relatorio" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/valor_relatorio"
+        app:layout_constraintEnd_toStartOf="@+id/procedimento_sv" />
 
     <TextView
         android:id="@+id/valor_relatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:layout_marginStart="29dp"
-        android:text="@string/valor_total"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="80dp"
         android:fontFamily="@font/alata"
+        android:text="@string/valor_total"
         android:textColor="@color/color3"
-        android:textStyle="bold"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/procedimentos_relatorio" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/obs_relatorio"
+        app:layout_constraintEnd_toStartOf="@+id/valor_sv" />
 
     <TextView
         android:id="@+id/obs_relatorio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/alata"
         android:paddingStart="45dp"
         android:paddingEnd="45dp"
-        android:layout_marginBottom="90dp"
-        android:textAlignment="center"
         android:text="@string/obs_relatorio"
-        android:fontFamily="@font/alata"
+        android:textAlignment="center"
         android:textColor="@color/color3"
-        android:textStyle="bold"
         android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_capturar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/view" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/image_barbeirorelatorio"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:layout_marginEnd="137dp"
         android:layout_marginTop="93dp"
+        android:layout_marginEnd="137dp"
+        android:contentDescription="@string/barbeiro_relatorio"
         android:src="@drawable/img_barbeiro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
-        android:contentDescription="@string/barbeiro_relatorio" />
+        app:layout_constraintTop_toTopOf="@+id/view" />
 
     <ImageView
         android:id="@+id/image_cliente"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="155dp"
         android:layout_marginTop="42dp"
+        android:layout_marginEnd="155dp"
+        android:contentDescription="@string/barbeiro_relatorio"
         android:src="@drawable/ic_cliente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_barbeirorelatorio"
-        android:contentDescription="@string/barbeiro_relatorio" />
+        app:layout_constraintTop_toTopOf="@+id/image_barbeirorelatorio" />
 
     <ImageView
         android:id="@+id/image_data"
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:layout_marginEnd="141dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="@string/barbeiro_relatorio"
         android:src="@drawable/ic_horario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_cliente"
-        android:contentDescription="@string/barbeiro_relatorio" />
+        app:layout_constraintBottom_toTopOf="@+id/image_procedimentos"
+        app:layout_constraintEnd_toStartOf="@+id/data_relatorio"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view" />
 
     <ImageView
         android:id="@+id/image_procedimentos"
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:layout_marginEnd="141dp"
-        android:layout_marginTop="46dp"
+        android:layout_marginBottom="68dp"
+        android:contentDescription="@string/barbeiro_relatorio"
         android:src="@drawable/ic_procedimentos"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_data"
-        android:contentDescription="@string/barbeiro_relatorio" />
+        app:layout_constraintBottom_toTopOf="@+id/image_valor"
+        app:layout_constraintEnd_toStartOf="@+id/procedimentos_relatorio"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="@+id/view" />
 
     <ImageView
         android:id="@+id/image_valor"
         android:layout_width="27dp"
         android:layout_height="27dp"
-        android:layout_marginEnd="115dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="@string/barbeiro_relatorio"
         android:src="@drawable/ic_valor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/image_procedimentos"
-        android:contentDescription="@string/barbeiro_relatorio" />
+        app:layout_constraintBottom_toTopOf="@+id/obs_relatorio"
+        app:layout_constraintEnd_toStartOf="@+id/valor_relatorio"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
