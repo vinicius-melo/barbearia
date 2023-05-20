@@ -119,9 +119,9 @@ public class AgendarHorario extends AppCompatActivity {
 
                             listarProcedimentos();
 
-                            mensagemAgendamento = "Novo%20Agendamento:%0A|%0A|%0A|%0A|%0A|%20Cliente%20:%20" + nomeClienteUrl +
-                                    "%0A|%20Horario:%20" + itemSelecionado + "%0A|%20Procedimentos:%20" + procedimentoCliente +
-                                    "%0A%0A%0ATOTAL%20A%20PAGAR:%20R$%20" + valorCorte + ",00";
+                            mensagemAgendamento = "💈%20📩Novo%20Agendamento:%0A💈%0A💈%0A💈%0A💈%0A💈%20💬Cliente%20:%20" + nomeClienteUrl +
+                                    "%0A💈%20📆Horario:%20" + itemSelecionado + "%0A💈%20📄Procedimentos:%20"+ procedimentoCliente +
+                                    "%0A💈%0A💈%0A💈%20💸TOTAL%20A%20PAGAR:%20R$%20" + valorCorte + ",00";
                             agendamentoTelegram();
                             agendamentoRealizado();
 
