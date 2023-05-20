@@ -22,12 +22,14 @@
 
         <activity
             android:name=".AgendarHorario"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name=".EscolhaBarbeiros"
-            android:exported="false">
+            android:exported="false"
+            android:screenOrientation="portrait">
 
         </activity>
 

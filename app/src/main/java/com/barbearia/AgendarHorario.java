@@ -55,7 +55,7 @@ public class AgendarHorario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agendar_horario);
 
-        String urlImage = "https://vinicius-melo.github.io/fotos/";
+        String urlImage = "https://willbarbershop.net/barbershop/fotos/";
 
         AlertDialog.Builder erroAgendamento = new AlertDialog.Builder(AgendarHorario.this);
 
@@ -234,7 +234,7 @@ public class AgendarHorario extends AppCompatActivity {
         spinner = findViewById(R.id.marcacao_data_horario);
         itens = new ArrayList<>();
 
-        itens.add("   Agende seu horário");
+        itens.add("Agende seu horário");
 
         String[] nome = nomeBarbeiro.split(" ");
 
@@ -260,44 +260,32 @@ public class AgendarHorario extends AppCompatActivity {
                             Ion.with(AgendarHorario.this).load(url).asJsonArray().setCallback((a, resultado) -> {
                                 for (int g = 0; g < resultado.size(); g++) {
                                     JsonObject objeto = resultado.get(g).getAsJsonObject();
-                                    itens.add(objeto.get("horario disponível").getAsString());
+                                    itens.add(objeto.get("horario disponivel").getAsString());
                                 }
                             });
 
 
                         }
                     });
-        } else {
-            String verificarBarbeiro = HOST + "/barbershop/read.php?nome_barbeiro=" + nomeBarbeiro;
-            Ion.with(AgendarHorario.this).load(verificarBarbeiro).asJsonArray().setCallback((e, result) -> {
-                for (int i = 0; i < result.size(); i++) {
-                    nomeBarbeiroSelecionado = result.get(i).getAsJsonObject();
-                    idBarbeiro = nomeBarbeiroSelecionado.get("id").getAsString();
-                    tokenBarbeiro = nomeBarbeiroSelecionado.get("token").getAsString();
-                    String url = HOST + "/barbershop/agendar_horario.php?id_barbeiro=" + nomeBarbeiroSelecionado.get("id").getAsString();
-                    Ion.with(AgendarHorario.this).load(url).asJsonArray().setCallback((a, resultado) -> {
-                        for (int g = 0; g < resultado.size(); g++) {
-                            JsonObject objeto = resultado.get(g).getAsJsonObject();
-                            itens.add(objeto.get("horario disponível").getAsString());
-                        }
-                    });
-                }
-            });
         }
 
 
-        spinner.setAdapter(new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, itens));
+
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // Aqui você pode capturar o valor do item selecionado
                 itemSelecionado = parent.getItemAtPosition(position).toString();
+
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
             }
         });
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.style_spinner, itens);
+        spinner.setAdapter(adapter);
     }
 
 
