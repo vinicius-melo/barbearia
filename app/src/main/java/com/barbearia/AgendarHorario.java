@@ -161,16 +161,16 @@ public class AgendarHorario extends AppCompatActivity {
                     tesoura.setChecked(true);
                     valorCorte += 30;
                 }
-                procedimento.add("MAQUINA");
+                procedimento.add("Maquina");
                 valorTotal.setText("R$ " + valorCorte + ",00");
             } else {
                 if (tesoura.isChecked()) {
                     valorCorte -= 15;
-                    procedimento.remove("MAQUINA");
+                    procedimento.remove("Maquina");
                 } else {
                     valorCorte -= 30;
-                    procedimento.remove("MAQUINA");
-                    procedimento.remove("TESOURA");
+                    procedimento.remove("Maquina");
+                    procedimento.remove("Tesoura");
                 }
 
                 valorTotal.setText("R$ " + valorCorte + ",00");
@@ -186,12 +186,12 @@ public class AgendarHorario extends AppCompatActivity {
                     valorCorte += 15;
                     valorTotal.setText("R$ " + valorCorte + ",00");
                 } else {
-                    procedimento.add("TESOURA");
+                    procedimento.add("Tesoura");
                 }
             } else {
                 if (!maquina.isChecked()) {
                     valorCorte -= 15;
-                    procedimento.remove("TESOURA");
+                    procedimento.remove("Tesoura");
                 }
                 valorTotal.setText("R$ " + valorCorte + ",00");
                 if (valorCorte <= 0) {
@@ -204,11 +204,11 @@ public class AgendarHorario extends AppCompatActivity {
             if (barba.isChecked()) {
                 valorCorte += 30;
                 valorTotal.setText("R$ " + valorCorte + ",00");
-                procedimento.add("BARBA");
+                procedimento.add("Barba");
             } else {
                 valorCorte -= 30;
                 valorTotal.setText("R$ " + valorCorte + ",00");
-                procedimento.remove("BARBA");
+                procedimento.remove("Barba");
                 if (valorCorte <= 0) {
                     valorTotal.setText("");
                 }
@@ -219,10 +219,10 @@ public class AgendarHorario extends AppCompatActivity {
             if (sobrancelha.isChecked()) {
                 valorCorte += 10;
                 valorTotal.setText("R$ " + valorCorte + ",00");
-                procedimento.add("SOBRANCELHA");
+                procedimento.add("Sobrancelha");
             } else {
                 valorCorte -= 10;
-                procedimento.remove("SOBRANCELHA");
+                procedimento.remove("Sobrancelha");
             }
             valorTotal.setText("R$ " + valorCorte + ",00");
             if (valorCorte <= 0) {
