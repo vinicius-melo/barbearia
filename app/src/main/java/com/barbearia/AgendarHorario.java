@@ -157,6 +157,7 @@ public class AgendarHorario extends AppCompatActivity {
             if (maquina.isChecked()) {
                 if (tesoura.isChecked()) {
                     valorCorte += 15;
+                    procedimento.remove("Tesoura");
                 } else {
                     tesoura.setChecked(true);
                     valorCorte += 30;
