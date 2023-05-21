@@ -41,16 +41,25 @@ public class Relatorio extends AppCompatActivity {
         procedimento.setText(getIntent().getStringExtra("procedimento"));
         valorTotal.setText(getIntent().getStringExtra("valorTotal"));
 
-        AlertDialog.Builder agendamentoRealizado = new AlertDialog.Builder(Relatorio.this);
-        agendamentoRealizado.setMessage("Agendamento realizado com Sucesso! Sera necessario aprensetar o print do agendamento que se encontra na galeria no dia marcado");
-        agendamentoRealizado.setCancelable(false);
-        agendamentoRealizado.setPositiveButton("ok", (dialogInterface, i) -> {
-            Intent intent = new Intent(this, MainActivity.class);
-            captureScreen();
-            startActivity(intent);
+
+        btnAgendamento = findViewById(R.id.btn_capturar);
+        btnAgendamento.setOnClickListener(v -> {
+            AlertDialog.Builder agendamentoRealizado = new AlertDialog.Builder(Relatorio.this);
+            agendamentoRealizado.setMessage("Agendamento realizado com Sucesso! Sera necessario aprensetar o print do agendamento que se encontra na galeria no dia marcado");
+            agendamentoRealizado.setCancelable(false);
+            agendamentoRealizado.setPositiveButton("ok", (dialogInterface, i) -> {
+                Intent intent = new Intent(this, MainActivity.class);
+                captureScreen();
+                startActivity(intent);
+            });
+            agendamentoRealizado.create().show();
         });
 
-        agendamentoRealizado.create().show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        // Lógica personalizada aqui
     }
 
     private void captureScreen() {

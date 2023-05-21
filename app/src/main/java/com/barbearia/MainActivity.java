@@ -5,13 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 import com.koushikdutta.ion.Ion;
 
 public class MainActivity extends AppCompatActivity {
+
+    private boolean doubleBackToExitPressedOnce = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +45,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
 
-    /*
-    Log.i("teste", "teste" + obj.get("nome"));
-                        Log.i("teste", "teste" + obj.get("idade"));
-                        Log.i("teste", "teste" + obj.get("profissao"));
-    */
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Pressione novamente para sair do aplicativo", Toast.LENGTH_SHORT).show();
 
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000); // Define um tempo de espera de 2 segundos
+
+    }
 }

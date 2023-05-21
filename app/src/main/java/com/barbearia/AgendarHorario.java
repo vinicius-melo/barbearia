@@ -109,7 +109,7 @@ public class AgendarHorario extends AppCompatActivity {
 
 
             confirmaAgendar.setPositiveButton("CONFIRMAR", (dialogInterface, i) -> {
-                if (!itemSelecionado.equals("   Agende seu horário")) {
+                if (!itemSelecionado.equals("Agende seu horário")) {
                     if (maquina.isChecked() || tesoura.isChecked() || sobrancelha.isChecked() || barba.isChecked()) {
                         if (!TextUtils.isEmpty(nomeCliente.getText())) {
 
@@ -163,6 +163,8 @@ public class AgendarHorario extends AppCompatActivity {
                 }
                 procedimento.add("Maquina");
                 valorTotal.setText("R$ " + valorCorte + ",00");
+
+                Log.i("TAG", "procedimento: " + "maquina");
             } else {
                 if (tesoura.isChecked()) {
                     valorCorte -= 15;
@@ -185,9 +187,12 @@ public class AgendarHorario extends AppCompatActivity {
                 if (!maquina.isChecked()) {
                     valorCorte += 15;
                     valorTotal.setText("R$ " + valorCorte + ",00");
-                } else {
                     procedimento.add("Tesoura");
+                } else {
+
                 }
+
+                Log.i("TAG", "procedimento: " + "tesoura");
             } else {
                 if (!maquina.isChecked()) {
                     valorCorte -= 15;
@@ -205,6 +210,8 @@ public class AgendarHorario extends AppCompatActivity {
                 valorCorte += 30;
                 valorTotal.setText("R$ " + valorCorte + ",00");
                 procedimento.add("Barba");
+
+                Log.i("TAG", "procedimento: " + "barba");
             } else {
                 valorCorte -= 30;
                 valorTotal.setText("R$ " + valorCorte + ",00");
@@ -220,6 +227,7 @@ public class AgendarHorario extends AppCompatActivity {
                 valorCorte += 10;
                 valorTotal.setText("R$ " + valorCorte + ",00");
                 procedimento.add("Sobrancelha");
+                Log.i("TAG", "procedimento: " + "sobrancelha");
             } else {
                 valorCorte -= 10;
                 procedimento.remove("Sobrancelha");
@@ -239,7 +247,7 @@ public class AgendarHorario extends AppCompatActivity {
         itens = new ArrayList<>();
 
         itens.add("Agende seu horário");
-
+        itens.add("12/12/1212");
         String[] nome = nomeBarbeiro.split(" ");
 
         Log.i("tamanhoNome", "tamanho nome: " + nome.length);
@@ -327,11 +335,13 @@ public class AgendarHorario extends AppCompatActivity {
     }
 
     public void listarProcedimentos() {
+        Log.i("TAG", "procedimento: " + procedimentoCliente);
+        Log.i("TAG", "procedimento: " + "0");
         for (int i = 0; i < procedimento.size(); i++) {
-            Log.i("TAG", "procedimento: " + procedimentoCliente);
             procedimentoClienteTotal += procedimento.get(i) + " ";
             procedimentoCliente += procedimento.get(i) + "%20";
-
+            Log.i("TAG", "procedimento: " + procedimentoCliente);
+            Log.i("TAG", "procedimento: " + i+1);
         }
     }
 }
