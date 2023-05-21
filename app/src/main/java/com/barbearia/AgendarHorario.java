@@ -73,6 +73,7 @@ public class AgendarHorario extends AppCompatActivity {
             cidade = "CARUARU";
         }
 
+
         carregarPerfil(urlImage, fotoBarbeiro);
         listaHorario(nomeBarbeiro);
 
@@ -119,7 +120,10 @@ public class AgendarHorario extends AppCompatActivity {
                                     "%0A💈%0A💈%0A💈%20💸TOTAL%20A%20PAGAR:%20R$%20" + valorCorte + ",00";
                             agendamentoTelegram();
                             agendamentoRealizado();
+
                             valorCorteTotal = "R$ " + valorCorte + ",00";
+                            procedimentoClienteTotal = procedimentoClienteTotal.replaceAll(" ", "\n");
+
                             Intent intent = new Intent(this, Relatorio.class);
                             intent.putExtra("nomeBarbeiro", nomeBarbeiro);
                             intent.putExtra("nomeCliente", nomeClienteTotal);

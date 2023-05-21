@@ -23,6 +23,7 @@ import java.io.OutputStream;
 public class Relatorio extends AppCompatActivity {
 
     private TextView nomeBarbeiro, nomeCliente, horario, procedimento, valorTotal;
+    private Button btnAgendamento;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
