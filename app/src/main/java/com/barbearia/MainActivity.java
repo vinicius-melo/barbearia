@@ -45,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
+            finishAffinity(); // Fecha todas as atividades da pilha, incluindo a atividade atual
         }
 
         this.doubleBackToExitPressedOnce = true;
@@ -61,6 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000); // Define um tempo de espera de 2 segundos
-
     }
+
 }
